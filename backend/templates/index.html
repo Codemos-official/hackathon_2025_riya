@@ -1,34 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Interview Tracker</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-
 <div class="container hero">
-    <h1>Interview Application Tracker</h1>
+    
+    <head>
+    <meta charset="UTF-8">
+    <title>Interview Application Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
 
-    <p class="subtitle">
-        Track your job applications, interview status,<br>
-        and stay organised — all in one place.
-    </p>
 
+    <!-- Header -->
+    <div class="hero-header">
+        <h1>Interview Application Tracker</h1>
+        <p class="subtitle">
+            Track your job applications, interview status,<br>
+            and stay organised — all in one place.
+        </p>
+    </div>
+
+    <!-- Actions -->
     <div class="btn-group">
         <a href="{{ url_for('login') }}" class="btn primary">Login</a>
         <a href="{{ url_for('register') }}" class="btn secondary">Register</a>
     </div>
 
+    <!-- Divider -->
+    <div class="divider"></div>
+
+    <!-- Features -->
     <div class="features">
-        <div class="feature-card">📌 Track Companies</div>
-        <div class="feature-card">🗂 Manage Job Positions</div>
-        <div class="feature-card">📅 Interview Dates</div>
-        <div class="feature-card">📊 Status Updates</div>
+        <div class="feature-card">
+            <span>📌</span>
+            <p>Track Companies</p>
+        </div>
+        <div class="feature-card">
+            <span>🗂</span>
+            <p>Manage Job Positions</p>
+        </div>
+        <div class="feature-card">
+            <span>📅</span>
+            <p>Interview Dates</p>
+        </div>
+        <div class="feature-card">
+            <span>📊</span>
+            <p>Status Updates</p>
+        </div>
     </div>
+
 </div>
 
-</body>
-</html>
 
 
