@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | Interview Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container auth-card">
+    <h1>Welcome Back 👋</h1>
+    <p class="subtitle">Login to manage your interview applications</p>
+
+    {% for msg in get_flashed_messages() %}
+        <div class="flash">{{ msg }}</div>
+    {% endfor %}
+
+    <form method="POST" class="form">
+        <input type="email" name="email" placeholder="Email address" required>
+        <input type="password" name="password" placeholder="Password" required>
+
+        <button class="btn primary">Login</button>
+    </form>
+
+    <p class="auth-footer">
+        Don’t have an account?
+        <a href="{{ url_for('register') }}">Create one</a>
+    </p>
+</div>
+
+</body>
+</html>
+
+
+
+

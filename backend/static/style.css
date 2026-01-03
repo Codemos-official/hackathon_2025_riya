@@ -1,0 +1,282 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= BODY ================= */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f4f8;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+/* ================= BASE CONTAINER ================= */
+/* Used for login & register */
+.container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 420px;
+}
+
+/* ================= DASHBOARD ================= */
+/* This FIXES your layout problem */
+/* ===== DASHBOARD LAYOUT FIX (IMPORTANT) ===== */
+.dashboard {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;   /* FORCE TOP TO BOTTOM */
+    gap: 30px;
+}
+
+/* Every direct section takes full width */
+.dashboard > * {
+    width: 100%;
+}
+
+
+/* ================= HEADINGS ================= */
+h1, h2, h3 {
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* ================= FORMS ================= */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input, select {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+input:focus, select:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* ================= BUTTONS ================= */
+button {
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: #007BFF;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.btn {
+    padding: 10px 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    display: inline-block;
+}
+
+.btn.primary {
+    background: #007BFF;
+    color: #fff;
+}
+
+.btn.danger {
+    background: #dc3545;
+    color: #fff;
+}
+
+.btn.small {
+    padding: 6px 12px;
+    font-size: 13px;
+}
+
+/* ================= HEADER ================= */
+.dashboard-header {
+    text-align: center;
+}
+
+/* ================= LOGOUT ================= */
+.logout-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+/* ================= STATISTICS ================= */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.stat-card {
+    padding: 22px;
+    border-radius: 18px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.stat-card h3 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.stat-card.total {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+}
+
+.stat-card.scheduled {
+    background: linear-gradient(135deg, #f6d365, #fda085);
+}
+
+.stat-card.selected {
+    background: linear-gradient(135deg, #43e97b, #38f9d7);
+}
+
+.stat-card.rejected {
+    background: linear-gradient(135deg, #fa709a, #fee140);
+}
+
+/* ================= CARDS ================= */
+.card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    width: 100%;
+}
+
+/* ================= APPLICATION LIST ================= */
+.applications {
+    display: grid;
+    gap: 18px;
+}
+
+.application-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;   /* 🔑 FIX */
+}
+
+
+/* ================= STATUS ================= */
+.status {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+.app-left {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+
+.status.applied {
+    background: #e3f2fd;
+    color: #0d6efd;
+}
+
+.status.selected {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status.rejected {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* ================= EMPTY ================= */
+.empty {
+    text-align: center;
+    color: #777;
+}
+
+.app-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+.application-card {
+    align-items: center;
+}
+
+.app-left h3 {
+    text-transform: capitalize;
+}
+/* ================= APPLICATION CARDS FIX ================= */
+
+.applications {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.application-card {
+    background: #f9fbff;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;   /* top alignment */
+    border: 1px solid #e6ecf5;
+}
+
+/* Left content */
+.app-left {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* Company name */
+.app-left h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* Job title */
+.position {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Date */
+.date {
+    font-size: 13px;
+    color: #777;
+}
+
+/* Right content */
+.app-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+

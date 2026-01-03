@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interview Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container hero">
+    <h1>Interview Application Tracker</h1>
+
+    <p class="subtitle">
+        Track your job applications, interview status,<br>
+        and stay organised — all in one place.
+    </p>
+
+    <div class="btn-group">
+        <a href="{{ url_for('login') }}" class="btn primary">Login</a>
+        <a href="{{ url_for('register') }}" class="btn secondary">Register</a>
+    </div>
+
+    <div class="features">
+        <div class="feature-card">📌 Track Companies</div>
+        <div class="feature-card">🗂 Manage Job Positions</div>
+        <div class="feature-card">📅 Interview Dates</div>
+        <div class="feature-card">📊 Status Updates</div>
+    </div>
+</div>
+
+</body>
+</html>
+
+
