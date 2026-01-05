@@ -2,4 +2,5 @@ Flask
 Flask-Login
 Flask-SQLAlchemy
 Werkzeug
-gunicorn
+gunicorn==21.2.0
+
